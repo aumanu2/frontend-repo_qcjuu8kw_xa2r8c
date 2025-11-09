@@ -1,28 +1,26 @@
-import { useState } from 'react'
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="font-['Inter','IBM Plex Sans',system-ui,sans-serif] selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <footer className="border-t border-black/10 bg-white/80 py-10 text-center text-xs text-black/60 backdrop-blur-md dark:border-white/10 dark:bg-black/60 dark:text-white/60">
+        <div className="mx-auto max-w-6xl px-6">
+          <p>
+            © {new Date().getFullYear()} Your Name. Built with React, Tailwind & Spline. Minimalist BW aesthetic with subtle motion.
+          </p>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
